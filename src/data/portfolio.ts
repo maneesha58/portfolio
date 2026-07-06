@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about =
-  "AI/ML engineer with an MS in Computer Science (4.0/4.0 GPA) from Santa Clara University and 3+ years of industry experience building production-grade data-driven and ML-adjacent systems at ICICI Lombard. Skilled in deep learning, NLP, LLM fine-tuning (LoRA/PEFT), RAG pipelines, and full-stack application development. Experienced with HuggingFace Transformers, PyTorch, TensorFlow, and enterprise DevOps tooling. Passionate about building next-generation AI systems — from CNN classifiers and NLP pipelines to real-time intelligent applications.";
+  "AI/ML engineer with an MS in Computer Science (4.0/4.0 GPA) from Santa Clara University and 3+ years of industry experience building production-grade data-driven and ML-adjacent systems at ICICI Lombard. Skilled in deep learning, NLP, LLM fine-tuning (LoRA/PEFT), and production RAG systems with hybrid search, re-ranking, and FastAPI backends. Experienced with HuggingFace Transformers, PyTorch, TensorFlow, Pinecone, and enterprise DevOps tooling. Passionate about building next-generation AI systems — from CNN classifiers and NLP pipelines to document intelligence applications.";
 
 export const education = [
   {
@@ -71,12 +71,15 @@ export const skillCategories = [
     skills: [
       "RAG pipelines",
       "LangChain",
+      "Pinecone",
       "ChromaDB",
       "Vector embeddings",
+      "BM25 hybrid search",
+      "CrossEncoder re-ranking",
       "Prompt engineering",
       "OpenAI GPT",
       "Google Gemini",
-      "LLaMA (Groq API)",
+      "LLaMA 3.3 (Groq API)",
       "AI evaluations & adversarial benchmarking",
     ],
   },
@@ -90,6 +93,8 @@ export const skillCategories = [
       "Postman",
       "SoapUI",
       "REST & SOAP APIs",
+      "FastAPI",
+      "Pydantic",
       "Load/performance testing",
       "Flask",
       "AWS (EC2, S3)",
@@ -138,19 +143,32 @@ export const projects = [
     highlights: ["127× faster inference", "0.84 Macro-F1", "0.89 in-distribution F1"],
   },
   {
-    title: "Document Q&A RAG System — End-to-End GenAI Pipeline",
+    title: "Production RAG System — Document Intelligence Pipeline",
     github: "https://github.com/maneesha58/rag-document-qa",
     stack: [
       "Python",
+      "RAG",
       "LangChain",
+      "Pinecone",
       "ChromaDB",
       "HuggingFace Sentence Transformers",
-      "LLaMA 3.3 70B (Groq)",
+      "FastAPI",
       "Streamlit",
+      "Groq API",
+      "LLaMA 3.3",
+      "BM25",
+      "Hybrid Search",
+      "CrossEncoder Re-ranking",
+      "REST API",
+      "Pydantic",
     ],
     description:
-      "Built a RAG system from scratch with multi-format ingestion (PDF, Word, CSV), sliding-window chunking, vector embeddings, and ChromaDB HNSW retrieval grounding LLaMA 3.3 70B answers strictly in uploaded content — with multi-turn memory via Streamlit.",
-    highlights: ["Multi-format RAG", "ChromaDB HNSW", "Groq LLaMA 3.3"],
+      "Built an end-to-end RAG system from prototype to production across three iterations — multi-format ingestion (PDF, Word, CSV), sliding-window chunking, hybrid search (BM25 + semantic), CrossEncoder re-ranking, Pinecone/ChromaDB vector stores, and a decoupled FastAPI + Streamlit stack serving LLaMA 3.3 via Groq with strict source grounding and citations.",
+    highlights: [
+      "3-level architecture evolution",
+      "Hybrid search + re-ranking",
+      "FastAPI production backend",
+    ],
   },
   {
     title: "Brain Tumor Detection – CNN Medical Imaging Classifier",
